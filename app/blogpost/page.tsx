@@ -29,20 +29,20 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center p-6">
-      <div className="w-full max-w-md bg-white shadow-md rounded-lg p-6">
-        <h1 className="text-2xl font-bold text-gray-800 mb-4">My Blog</h1>
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 flex flex-col items-center p-6">
+      <div className="w-full max-w-md bg-white dark:bg-gray-800 shadow-md rounded-lg p-6">
+        <h1 className="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">My Blog</h1>
         <div className="mb-4">
           <input
             type="text"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             placeholder="Write something..."
-            className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 mb-3"
+            className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-gray-100 dark:border-gray-600 mb-3"
           />
           <button
             onClick={handlePost}
-            className="w-full bg-purple-500 text-white p-3 rounded-md hover:bg-blue-600"
+            className="w-full bg-purple-500 text-white p-3 rounded-md hover:bg-blue-600 dark:bg-purple-700 dark:hover:bg-purple-600"
           >
             Post
           </button>
@@ -51,7 +51,7 @@ const Home: React.FC = () => {
           {posts.map((post, index) => (
             <div
               key={index}
-              className="bg-gray-50 border border-gray-200 rounded-md p-4 mb-3"
+              className="bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-md p-4 mb-3"
             >
               {post}
             </div>

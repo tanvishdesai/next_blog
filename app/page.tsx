@@ -9,7 +9,8 @@ export default function Home() {
     useEffect(() => {
       const typed = new Typed(el.current, {
         strings: ['Martin Scorcese', 'Summer McIntosh', 'Javed Akhtar'],
-        typeSpeed: 50,
+        typeSpeed: 80,
+        loop: true,
       });
   
       return () => {
